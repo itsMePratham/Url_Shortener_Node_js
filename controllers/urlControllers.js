@@ -15,9 +15,7 @@ async function createUrl(req, res) {
     visitHistory: [],
   });
 
-  return res.status(201).json({
-    message: "URL created successfully",
-  });
+  return res.redirect('/views')
 }
 
 async function getUrl(req, res) {

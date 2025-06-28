@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submit your Information</title>
+  <meta charset="UTF-8">
+  <title>URL Shortener</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    input[type="url"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <h1>🔗 Create a Short URL</h1>
+
+  <form action="/urls" method="POST">
+    <label for="url">Enter Original URL:</label><br><br>
+    <input type="url" name="redirectUrl" id="url" placeholder="https://example.com" required><br>
+    <input type="submit" value="Shorten URL">
+  </form>
+
 </body>
 </html>
